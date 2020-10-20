@@ -1,6 +1,0 @@
-tensorflow
-pyngrok
-pandas
-numpy
-streamlit
-jupyter notebook
