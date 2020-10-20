@@ -1,0 +1,5 @@
+If you are using anaconda 
+then create a evironment ----
+
+conda create -n tf-gpu tensorflow-gpu cudatoolkit=9.0
+conda activate tf-gpu
