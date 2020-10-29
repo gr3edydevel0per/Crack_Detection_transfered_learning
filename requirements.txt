@@ -1,6 +1,9 @@
 tensorflow
-pyngrok
 pandas
 numpy
 streamlit
 jupyter notebook
+
+===================================================
+for gpu support visit
+https://www.tensorflow.org/install/gpu
