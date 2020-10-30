@@ -11,7 +11,7 @@ import random
 
 def cal_confi(State):
   global event_sum
-  data = pd.read_csv("Data.csv")                           
+  data = pd.read_csv("weighst_data/Data.csv")                           
   df = pd.DataFrame(data)
   loc_state = df.loc[df['State'] == State] 
   event = np.array(loc_state)
@@ -78,7 +78,7 @@ if file is  None:
 else:   
    try:
      image = Image.open(file)
-     rebuild_model = load_model("my_model.h5")
+     rebuild_model = load_model("weights_data/my_model.h5")
      rebuild_model.compile(loss='categorical_crossentropy',
               optimizer='Adam',
               metrics=['accuracy'])
