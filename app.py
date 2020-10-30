@@ -11,7 +11,7 @@ import random
 
 def cal_confi(State):
   global event_sum
-  data = pd.read_csv("weighst_data/Data.csv")                           
+  data = pd.read_csv("weights_data/Data.csv")                           
   df = pd.DataFrame(data)
   loc_state = df.loc[df['State'] == State] 
   event = np.array(loc_state)
