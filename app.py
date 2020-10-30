@@ -11,7 +11,7 @@ import random
 
 def cal_confi(State):
   global event_sum
-  data = pd.read_csv("weights_data/Data.csv")                           
+  data = pd.read_csv("Data.csv")                           
   df = pd.DataFrame(data)
   loc_state = df.loc[df['State'] == State] 
   event = np.array(loc_state)
@@ -22,13 +22,17 @@ def calc_result(score):
    if result == "Crack":
        crack_score = random.randint(10, 25)
        total_score = crack_score + score
-       st.success(f"Your total score is {total_score}%")
+       if st.button('View Results'):
+            if result == "Crack":
+                st.error(f"The life expectancy of this structure in {State} is {total_score}%")
+                st.error("The Crack present can be harmful, and needs to be corrected as soon as possible.")
+
    elif result == "Not-Crack":
        crack_score = random.randint(25, 40)
        total_score = crack_score + score
-       st.success(f"Your total score is {total_score}%")
-
-
+       if st.button('View Results'):
+            st.error(f"The life expectancy of this structure in {State} is {total_score}%")
+            st.error("There is no such harmful crack present, and the structure is strong enough physically.")
 
 
 st.markdown("""
@@ -41,7 +45,7 @@ body {
 page_bg_img = '''
 <style>
 body {
-background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-image: url("https://www.thewowstyle.com/wp-content/uploads/2015/07/natural-beach-pictures-.jpg");
 background-size: cover;
 }
 </style>
@@ -74,7 +78,7 @@ if file is  None:
 else:   
    try:
      image = Image.open(file)
-     rebuild_model = load_model("weights_data/my_model.h5")
+     rebuild_model = load_model("my_model.h5")
      rebuild_model.compile(loss='categorical_crossentropy',
               optimizer='Adam',
               metrics=['accuracy'])
@@ -85,5 +89,3 @@ else:
      calc_result(event_sum)
    except ValueError:
       st.warning("Please upload a valid image")
-     
-     
