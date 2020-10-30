@@ -52,7 +52,7 @@ background-size: cover;
 '''
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
-st.title("Welcome to the Structural Defect Detection Programme!")
+st.title("Welcome to the Structural Defect Detection Program!")
 st.header("Please fill the following details properly:")
 State = st.selectbox(
     'Select State Name',
@@ -89,3 +89,14 @@ else:
      calc_result(event_sum)
    except ValueError:
       st.warning("Please upload a valid image")
+
+
+email = 'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=defectdetectors007@gmail.com'
+
+if st.sidebar.button('Contact Us'):
+    webbrowser.open_new_tab(email)
+
+suggest = 'https://forms.gle/ThBpKzUQDpKfno3t7'
+
+if st.sidebar.button('Rate Us'):
+    webbrowser.open_new_tab(suggest)

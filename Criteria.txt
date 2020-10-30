@@ -1,0 +1,16 @@
+Criteria:
+Cracks:
+40 points
+
+if cracks =(false):
+33 to 40 random
+
+if cracks =(true):
+12 to 18 random
+
+
+Historical Data:
+30 points
+
+Natural Event Data:
+30 points

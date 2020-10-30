@@ -1,11 +1,11 @@
 State,Event,Natural
-
+,,
 Andhra Pradesh,21,18
 Arunachal Pradesh,26,18
 Assam,24,19
 Bihar,17,24
 Chattisgarh,23,24
-Goa,24,22
+Goa,25,24
 Gujarat,23,20
 Haryana,24,26
 Himachal Pradesh,25,18
@@ -25,13 +25,13 @@ Sikkim,24,19
 Tamil Nadu,21,19
 Telangana,23,20
 Tripura,24,18
-Uttarakhand,22,17
+Uttarakhand,22,19
 Uttar Pradesh,22,24
 West Bengal,24,16
 New Delhi,16,26
-Daman and diu,23,21
-Puducherry,23,22
-Dadra and Nagar Haveli,22,22
+Daman and Diu,23,21
+Puducherry,24,23
+Dadra and Nagar Haveli,24,22
 Ladakh,24,18
 Chandigarh,20,26
 Lakshadweep,26,23
