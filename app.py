@@ -38,15 +38,16 @@ def calc_result(score):
 st.markdown("""
 <style>
 body {
-    color: #00000;
+    color: white;
 }
 </style>
     """, unsafe_allow_html=True)
 page_bg_img = '''
 <style>
 body {
-background-image: url("https://www.thewowstyle.com/wp-content/uploads/2015/07/natural-beach-pictures-.jpg");
+background-image: url("https://wallpaperxyz.com/wp-content/uploads/Website-Background-Images-HD-Free-Download-Wallpaperxyz.com-36.jpg");
 background-size: cover;
+text-color: white:
 }
 </style>
 '''
