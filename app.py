@@ -1,3 +1,4 @@
+
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.models import load_model
@@ -5,7 +6,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd 
 import webbrowser
-import cv2
 from PIL import Image, ImageOps
 import random
 
@@ -24,6 +24,7 @@ def calc_result(score):
        total_score = crack_score + score
        if st.button('View Results'):
             if result == "Crack":
+                st.error("Crack Detected")
                 st.error(f"The life expectancy of this structure in {State} is {total_score}%")
                 st.error("The Crack present can be harmful, and needs to be corrected as soon as possible.")
 
@@ -31,23 +32,40 @@ def calc_result(score):
        crack_score = random.randint(25, 40)
        total_score = crack_score + score
        if st.button('View Results'):
-            st.error(f"The life expectancy of this structure in {State} is {total_score}%")
-            st.error("There is no such harmful crack present, and the structure is strong enough physically.")
+            st.success("No Crcak Detected")
+            st.success(f"The life expectancy of this structure in {State} is {total_score}%")
+            st.success("There is no such harmful crack present, and the structure is strong enough physically.")
 
 
 st.markdown("""
 <style>
+.medium-button {
+   color:white
+}
 body {
-    color: white;
+  color: black;
+ 
 }
 </style>
     """, unsafe_allow_html=True)
 page_bg_img = '''
 <style>
 body {
-background-image: url("https://wallpaperxyz.com/wp-content/uploads/Website-Background-Images-HD-Free-Download-Wallpaperxyz.com-36.jpg");
+background-image: url("https://images.pexels.com/photos/2098428/pexels-photo-2098428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 background-size: cover;
-text-color: white:
+}
+.markdown-text-container{
+  color:white !important;
+}
+.stMarkdown{
+  color:white;
+}
+.stFileUploader label{
+ color:white;
+}
+.stSelectbox label,.uploadedFileName{
+ color:white; 
+}
 }
 </style>
 '''
@@ -91,13 +109,3 @@ else:
    except ValueError:
       st.warning("Please upload a valid image")
 
-
-email = 'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=defectdetectors007@gmail.com'
-
-if st.sidebar.button('Contact Us'):
-    webbrowser.open_new_tab(email)
-
-suggest = 'https://forms.gle/ThBpKzUQDpKfno3t7'
-
-if st.sidebar.button('Rate Us'):
-    webbrowser.open_new_tab(suggest)
