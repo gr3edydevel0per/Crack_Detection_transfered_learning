@@ -32,7 +32,7 @@ def calc_result(score):
        crack_score = random.randint(25, 40)
        total_score = crack_score + score
        if st.button('View Results'):
-            st.success("No Crcak Detected")
+            st.success("No Crack Detected")
             st.success(f"The life expectancy of this structure in {State} is {total_score}%")
             st.success("There is no such harmful crack present, and the structure is strong enough physically.")
 
@@ -66,11 +66,11 @@ background-size: cover;
 .stSelectbox label,.uploadedFileName{
  color:white; 
 }
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
 }
 </style>
 '''
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
 st.markdown(page_bg_img, unsafe_allow_html=True)
 st.title("Welcome to the Structural Defect Detection Program!")
 st.header("Please fill the following details properly:")
