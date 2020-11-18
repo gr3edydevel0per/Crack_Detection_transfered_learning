@@ -67,7 +67,7 @@ background-size: cover;
  color:white; 
 }
 #MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
+#footer {visibility: hidden;}
 }
 </style>
 '''
