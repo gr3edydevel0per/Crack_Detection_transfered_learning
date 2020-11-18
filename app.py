@@ -69,7 +69,8 @@ background-size: cover;
 }
 </style>
 '''
-
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
 st.markdown(page_bg_img, unsafe_allow_html=True)
 st.title("Welcome to the Structural Defect Detection Program!")
 st.header("Please fill the following details properly:")
