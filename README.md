@@ -2,3 +2,4 @@
 
 
 
+https://www.researchgate.net/profile/Huy_Tien_Nguyen/publication/321259272/figure/download/fig3/AS:572716869787648@1513557750080/Illustration-of-our-CNN-model-for-sentiment-analysis-Given-a-sequence-of-d-dimension.png
